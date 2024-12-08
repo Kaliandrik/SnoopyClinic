@@ -3,7 +3,7 @@ h1{
     position: relative;
     background-color: rgb(50, 240, 12);
     border-radius: 12px; 
-    font-size: 2rem; 
+    font-size: 5rem; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px; 
     text-align: center; 
@@ -14,14 +14,22 @@ h1{
     border: 5px solid black;
 }
 
+
+@media (max-width: 768px) {}
+    h1{
+        width: 100%;  
+        font-size: 2rem;
+    }
+
+
 h2{
-    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.336); 
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.336); 
     -webkit-text-stroke-color: black;
     color: rgba(255, 255, 255, 0.932);
     position: relative;
     background-color: rgb(146, 193, 236);
     border-radius: 12px; 
-    font-size: 4rem; 
+    font-size: 3rem; 
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 20px; 
     text-align: center; 
@@ -31,6 +39,15 @@ h2{
     margin: 20px auto;
     border: 5px solid black;
 }
+
+@media (max-width: 768px) {
+    h2 {
+        width: 100%; 
+        font-size: 2rem; 
+    }
+}
+
+
 
 .stTextInput, .stSlider, .stSelectbox, .stNumberInput {
     display: block;
@@ -70,8 +87,7 @@ h2{
 
 @media (max-width: 768px) {
     .stButton > button {
-        width: 80%; 
-        left: 10%; 
+        width: 100%; 
         font-size: 1.2rem; 
     }
 }

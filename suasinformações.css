@@ -1,4 +1,4 @@
-#da5774d9{
+h1{
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.336); 
     -webkit-text-stroke-color: black;
     color: rgba(255, 255, 255, 0.932);
@@ -15,6 +15,14 @@
     margin: 20px auto;
     border: 4px solid rgb(136, 140, 180);
 }
+
+@media (max-width: 768px) {
+    h1{
+        width: 100%;  
+        font-size: 1.2rem;
+    }
+}
+
 
 h2{
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.336); 

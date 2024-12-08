@@ -17,9 +17,8 @@ h1{
 }
 @media (max-width: 768px) {
     h1 {
-        width: 80%;
-        left: 10%; 
-        font-size: 1.2rem; 
+        width: 100%;
+        font-size: 2rem; 
     }
 }
 .stButton > button{
@@ -40,7 +39,6 @@ h1{
 @media (max-width: 768px) {
     .stButton > button {
         width: 80%; 
-        left: 10%; 
         font-size: 1.2rem; 
     }
 }
@@ -89,17 +87,16 @@ h2{
 
 @media (max-width: 768px) {
     h2 {
-        width: 80%; 
-        left: 10%; 
-        font-size: 1.2rem; 
+        width: 100%;  
+        font-size: 1.2rem;
+        text-align: center; 
     }
 }
 
 
 @media (max-width: 768px) {
     h3 {
-        width: 80%; 
-        left: 10%; 
-        font-size: 1.2rem; 
+        width: 100%;  
+        font-size: 1.7rem; 
     }
 }
