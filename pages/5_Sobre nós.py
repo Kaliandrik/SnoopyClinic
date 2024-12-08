@@ -1,7 +1,6 @@
 import streamlit as st
 import base64
 from PIL import Image
-import imageio
 import numpy as np
 
 def create_shaking_effect(image_path, output_path, shakes=10, intensity=5):
