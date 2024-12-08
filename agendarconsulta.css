@@ -1,0 +1,105 @@
+h1{
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(176, 163, 206);
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 1dvh;
+    text-align: center; 
+    font-size: 37px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid black;
+    width: 40rem;
+    height: 5rem;
+
+}
+@media (max-width: 768px) {
+    h1 {
+        width: 80%;
+        left: 10%; 
+        font-size: 1.2rem; 
+    }
+}
+.stButton > button{
+    position: relative;
+    width: 40vw;
+    height: 7rem;
+    max-width: 200px; 
+    min-width: 100px; 
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 3px solid black;
+    font-size: 25px; 
+    border-radius: 8px;
+    padding: 0.5em 1em; 
+    top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .stButton > button {
+        width: 80%; 
+        left: 10%; 
+        font-size: 1.2rem; 
+    }
+}
+
+
+
+.stTextInput, .stSlider, .stSelectbox, .stNumberInput, .stDateInput {
+    display: block;
+    margin-top: 5px; 
+    margin-bottom: 10px;  
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 12px;  
+    font-size: 16px;  
+    border-radius: 8px;  
+    background-color: rgba(169, 208, 226, 0.829); 
+    border: 2px solid rgb(32, 32, 32); 
+    color: rgb(255, 255, 255); 
+}
+
+.stTextInput label, .stSlider label, .stSelectbox label, .stDateInput label {
+    color: rgb(0, 0, 0); 
+    font-weight: bold; 
+    font-size: 25px;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(176, 163, 206);
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 1dvh;
+    text-align: center; 
+    font-size: 37px;
+    background-color: rgb(88, 129, 241);
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5);
+    border: 3px solid black;
+    width: 40rem;
+    height: 8rem;
+
+}
+
+
+@media (max-width: 768px) {
+    h2 {
+        width: 80%; 
+        left: 10%; 
+        font-size: 1.2rem; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    h3 {
+        width: 80%; 
+        left: 10%; 
+        font-size: 1.2rem; 
+    }
+}

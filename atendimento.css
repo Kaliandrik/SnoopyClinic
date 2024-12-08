@@ -1,0 +1,82 @@
+h1{
+    color: rgba(255, 255, 255, 0.932);
+    position: relative;
+    background-color: rgb(50, 240, 12);
+    border-radius: 12px; 
+    font-size: 2rem; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5); 
+    max-width: 90%; 
+    margin: 20px auto;
+    border: 5px solid black;
+}
+
+h2{
+    -webkit-text-stroke: 3px rgba(0, 0, 0, 0.336); 
+    -webkit-text-stroke-color: black;
+    color: rgba(255, 255, 255, 0.932);
+    position: relative;
+    background-color: rgb(146, 193, 236);
+    border-radius: 12px; 
+    font-size: 4rem; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5); 
+    max-width: 90%; 
+    margin: 20px auto;
+    border: 5px solid black;
+}
+
+.stTextInput, .stSlider, .stSelectbox, .stNumberInput {
+    display: block;
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    margin-left: auto;
+    margin-right: auto;  
+    padding: 12px;  
+    font-size: 16px;  
+    border-radius: 8px;  
+    background-color: rgb(255, 0, 0);  
+    border: 3px solid rgb(0, 0, 0);  
+    color: rgb(219, 247, 208);  
+}
+
+.stTextInput label, .stSlider label, .stSelectbox label {
+    color: white;  
+    font-weight: bold;  
+    font-size: 25px;  
+}
+
+.stButton > button {
+    position: relative;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 156, 228);
+    border: 5px solid black;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    padding: 0.5em 1em;
+
+   
+    display: block; 
+    margin: 1em auto; 
+    text-align: center; 
+}
+
+
+@media (max-width: 768px) {
+    .stButton > button {
+        width: 80%; 
+        left: 10%; 
+        font-size: 1.2rem; 
+    }
+}
+
+
+img{
+    border-radius: 50%;
+}
