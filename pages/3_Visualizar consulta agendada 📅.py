@@ -10,12 +10,13 @@ with col2:
 st.title("Consulta agendada:")
 st.sidebar.image("img/gatotop.jpg")
 
-if "nomepet" in st.session_state and "medico" in st.session_state and "data" in st.session_state and "horario" in st.session_state and "nomedono" in st.session_state:
+if "nomepet" in st.session_state and "medico" in st.session_state and "data" in st.session_state and "horario" in st.session_state and "nomedono" in st.session_state and "clinica" in st.session_state:
     st.title(f"Dono: {st.session_state["nomedono"]}")
     st.header(f"Pet: {st.session_state["nomepet"]}")
     st.header(f"Medico: {st.session_state["medico"]}")
     st.header(f"Horário: {st.session_state["horario"]}")
     st.header(f"Data:{st.session_state["data"]}")
+    st.header(f"Clínica:{st.session_state["clinica"]}")
 else:
     st.warning("Nenhuma consulta foi agendada ainda")
 
