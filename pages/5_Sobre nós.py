@@ -3,14 +3,24 @@ import base64
 from PIL import Image
 import numpy as np
 
-def create_shaking_effect(image_path, output_path, shakes=10, intensity=5):
+
+def create_exit_and_return_effect(image_path, output_path, moves=10, intensity=10):
     img = Image.open(image_path)
     frames = []
     width, height = img.size
 
-    for _ in range(shakes):
-        dx = np.random.randint(-intensity, intensity)
-        dy = np.random.randint(-intensity, intensity)
+    # Move para fora da tela
+    for i in range(moves):
+        dx = int(np.sin(np.pi * i / moves) * intensity)
+        dy = int(np.cos(np.pi * i / moves) * intensity)
+        frame = Image.new("RGBA", (width, height), (255, 255, 255, 0))
+        frame.paste(img, (dx, dy))
+        frames.append(frame)
+
+    # Volta para a posição original
+    for i in range(moves):
+        dx = int(np.sin(np.pi * (moves - i) / moves) * intensity)
+        dy = int(np.cos(np.pi * (moves - i) / moves) * intensity)
         frame = Image.new("RGBA", (width, height), (255, 255, 255, 0))
         frame.paste(img, (dx, dy))
         frames.append(frame)
@@ -18,15 +28,16 @@ def create_shaking_effect(image_path, output_path, shakes=10, intensity=5):
     frames[0].save(output_path, save_all=True, append_images=frames[1:], loop=0, duration=50)
 
 
-create_shaking_effect("img/snoopynatal.png", "img/snoopynatal_tremendo.gif")
-create_shaking_effect("img/imagemlegaldoatendimento.jpg", "img/imagemlegaldoatendimento_tremendo.gif")
+create_exit_and_return_effect("img/snoopynatal.png", "img/snoopynatal_saida_volta.gif")
+
+
 
 
 
 with open("sobrenos.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.sidebar.image("img/snoopynatal_tremendo.gif")
+st.sidebar.image("img/snoopynatal_saida_volta.gif")
 
 
 col1, col2, col3 = st.columns([1, 2, 1])  

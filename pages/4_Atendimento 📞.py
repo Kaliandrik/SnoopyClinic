@@ -10,8 +10,7 @@ with col2:
     st.image("img/fotolegalatendimento.jpg", width=300)
 st.title("Está com problemas? 😥")
 st.header("Como podemos ajudar você? 😁")
-st.sidebar.image("img/natalsidebar.jpg")
-
+st.sidebar.image("img/snoopy.jpg")
 
 
 ajuda = st.selectbox("Qual o seu problema?", ["Selecione uma opção", "Estou com problemas no cadastro.", "Como visualizo minhas informações?", "Como funciona o agendamento de consultas?"])

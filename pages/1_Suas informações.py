@@ -43,7 +43,7 @@ def get_base64_image(file_path):
         base64_str = base64.b64encode(image_file.read()).decode()
     return base64_str
 
-background_image_path = "img/fundofodaa.gif"
+background_image_path = "img/fundoinfo.jpg"
 base64_image = get_base64_image(background_image_path)
     
 
