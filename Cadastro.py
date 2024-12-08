@@ -26,7 +26,17 @@ def get_base64_image(file_path):
         base64_str = base64.b64encode(image_file.read()).decode()
     return base64_str
 
+
+def toggle_senha():
+    st.session_state.senha_visible = not st.session_state.senha_visible
+
 def cadastro():
+    senha_visible = False
+    if 'senha_visible' not in st.session_state:
+        st.session_state.senha_visible = senha_visible
+
+
+
     if "cadastro_realizado" in st.session_state and st.session_state["cadastro_realizado"]:
         background_image_path = "img/fundonatal.jpg"  
     else:
@@ -77,6 +87,9 @@ def cadastro():
         input_name = st.text_input("DIGITE SEU NOME:", placeholder="Seu nome")
         clinica = st.selectbox("QUAL CLINICA VOCÊ DESEJA?", ["Snoopy Clinic (SOBRAL)", "Snoopy Clinic (Tianguá)"])
         input_email = st.text_input("DIGITE SEU EMAIL:", placeholder="seuemail@gmail.com")
+        input_senha = st.text_input(
+    "Digite sua senha:",
+    type="text" if st.session_state.senha_visible else "password")
         selecionar_pet = st.selectbox("QUAL O SEU PET🐶?", ["Cachorro", "Gato", "Aves", "Répteis e anfíbios", "Outro"])
         
         if st.button("Enviar"):
@@ -84,6 +97,8 @@ def cadastro():
                 st.error("Preencha o seu nome de usuário")
             elif input_email == "":
                 st.error("Preencha seu email completo.")
+            elif len(input_senha)< 5:
+                st.error("Sua senha deve conter no mínimo 5 dígitos.", type= "password")
             elif not input_email.endswith("@gmail.com"):
                 st.error("Por favor, insira um e-mail válido que termine com @gmail.com.")
             else:

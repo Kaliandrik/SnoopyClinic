@@ -25,7 +25,8 @@ def create_shaking_effect(image_path, output_path, shakes=10, intensity=5):
 
 create_shaking_effect("img/natalsidebar.jpg", "img/natalsidebar_tremendo.gif")
 col1, col2, col3 = st.columns([1, 2, 1]) 
-
+with col2:
+    st.header("foto de perfil")
 with col2:
     st.image("img/usuario3.png", width=900)
 st.title("Suas Informações:")

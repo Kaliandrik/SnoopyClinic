@@ -16,10 +16,36 @@ h1{
     border: 4px solid rgb(136, 140, 180);
 }
 
+
+#foto-de-perfil{
+    top: 3rem;
+    color: rgba(255, 255, 255, 0.932);
+    position: relative;
+    background-color: rgb(115, 110, 160);
+    border-radius: 12px; 
+    font-size: 2rem; 
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); 
+    text-shadow: 5px 4px 10px rgba(0, 0, 0, 0.5);
+    max-width: 90%; 
+    margin: 20px auto;
+    border: 1px solid rgb(136, 140, 180);
+}
+
+@media (max-width: 768px) {
+    #foto-de-perfil{
+        width: 100%;  
+        font-size: 1.9rem;
+    }
+}
+
+
 @media (max-width: 768px) {
     h1{
         width: 100%;  
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 }
 
