@@ -1,23 +1,5 @@
 import streamlit as st
 import base64
-from PIL import Image
-import numpy as np
-def create_shaking_effect(image_path, output_path, shakes=10, intensity=5):
-    img = Image.open(image_path)
-    frames = []
-    width, height = img.size
-
-    for _ in range(shakes):
-        dx = np.random.randint(-intensity, intensity)
-        dy = np.random.randint(-intensity, intensity)
-        frame = Image.new("RGBA", (width, height), (255, 255, 255, 0))
-        frame.paste(img, (dx, dy))
-        frames.append(frame)
-
-    frames[0].save(output_path, save_all=True, append_images=frames[1:], loop=0, duration=50)
-
-
-create_shaking_effect("img/snoopynatal.png", "img/snoopynatal_tremendo.gif")
 with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -87,9 +69,7 @@ def cadastro():
         input_name = st.text_input("DIGITE SEU NOME:", placeholder="Seu nome")
         clinica = st.selectbox("QUAL CLINICA VOCÊ DESEJA?", ["Snoopy Clinic (SOBRAL)", "Snoopy Clinic (Tianguá)"])
         input_email = st.text_input("DIGITE SEU EMAIL:", placeholder="seuemail@gmail.com")
-        input_senha = st.text_input(
-    "Digite sua senha:",
-    type="text" if st.session_state.senha_visible else "password")
+        input_senha = st.text_input("Digite sua senha:",type="text" if st.session_state.senha_visible else "password")
         selecionar_pet = st.selectbox("QUAL O SEU PET🐶?", ["Cachorro", "Gato", "Aves", "Répteis e anfíbios", "Outro"])
         
         if st.button("Enviar"):
@@ -98,7 +78,9 @@ def cadastro():
             elif input_email == "":
                 st.error("Preencha seu email completo.")
             elif len(input_senha)< 5:
-                st.error("Sua senha deve conter no mínimo 5 dígitos.", type= "password")
+                st.error("Sua senha deve conter no mínimo 5 dígitos.")
+            elif input_senha=="":
+                st.error("Digite sua senha.")
             elif not input_email.endswith("@gmail.com"):
                 st.error("Por favor, insira um e-mail válido que termine com @gmail.com.")
             else:
